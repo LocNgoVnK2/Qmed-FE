@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from '../App';
 
 export const Header: React.FC = () => {
-  const { lang, setLang, t } = useTranslation();
+  const { lang, setLang, t, setActiveSolution } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -15,10 +15,19 @@ export const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-navy/95 backdrop-blur-lg shadow-2xl py-3' : 'bg-transparent py-6'}`}>
+    <header 
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
+        scrolled 
+          ? 'bg-navy shadow-2xl py-3 border-b border-white/5' 
+          : 'bg-transparent py-6'
+      }`}
+    >
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-3 cursor-pointer group">
+        <div 
+          className="flex items-center gap-3 cursor-pointer group"
+          onClick={() => setActiveSolution(null)}
+        >
           <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center overflow-hidden transition-transform group-hover:rotate-12">
              <div className="w-7 h-7 bg-navy flex items-center justify-center text-white font-black text-sm rounded-lg border-2 border-emerald shadow-inner">Q</div>
           </div>
@@ -32,7 +41,7 @@ export const Header: React.FC = () => {
         <nav className="hidden xl:flex items-center gap-1">
           {[
             { label: t.nav.goCourse, href: '#' },
-            { label: t.nav.allCourses, href: '#' },
+            { label: t.nav.allCourses, href: '#solutions' },
             { label: t.nav.ebook, href: '#' },
             { label: t.nav.contact, href: '#contact' },
             { label: t.nav.support, href: '#' }
@@ -40,7 +49,7 @@ export const Header: React.FC = () => {
             <a 
               key={idx} 
               href={item.href} 
-              className="px-4 py-2 text-white/80 hover:text-emerald transition-all font-semibold text-xs uppercase tracking-widest relative group"
+              className="px-4 py-2 text-white hover:text-emerald transition-all font-semibold text-xs uppercase tracking-widest relative group"
             >
               {item.label}
               <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-emerald transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>

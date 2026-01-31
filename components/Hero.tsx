@@ -57,12 +57,9 @@ export const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Bottom Scroll Indicator - Fixed vertical text and clipping */}
+      {/* Bottom Scroll Indicator - Removed "Scroll" text per request */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-40">
-        <div className="w-[1px] h-16 bg-gradient-to-b from-transparent via-emerald to-transparent"></div>
-        <div className="relative h-12">
-            <span className="text-[9px] text-white font-bold uppercase tracking-[0.4em] whitespace-nowrap [writing-mode:vertical-lr]">Scroll</span>
-        </div>
+        <div className="w-[1px] h-20 bg-gradient-to-b from-transparent via-emerald to-transparent"></div>
       </div>
     </section>
   );
