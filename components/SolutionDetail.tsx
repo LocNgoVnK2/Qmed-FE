@@ -13,13 +13,15 @@ export const SolutionDetail: React.FC<SolutionDetailProps> = ({ id }) => {
   if (!detail) return null;
 
   const images: Record<string, string> = {
-    recruitment: "https://images.unsplash.com/photo-1521791136064-7986c2959443?auto=format&fit=crop&q=80&w=1200&h=600",
-    audit: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&q=80&w=1200&h=600",
-    payroll: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=1200&h=600",
-    training: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=1200&h=600",
-    consulting: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1200&h=600",
-    specialized: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200&h=600"
+    recruitment: "https://images.unsplash.com/photo-1521791136064-7986c2959443?auto=format&fit=crop&q=80&w=1600&h=900",
+    audit: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=1600&h=900",
+    payroll: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1600&h=900",
+    training: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1600&h=900",
+    consulting: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600&h=900",
+    specialized: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=1600&h=900"
   };
+
+  const fallbackImg = "https://images.unsplash.com/photo-1576091160550-2173bdd99802?auto=format&fit=crop&q=80&w=1600&h=900";
 
   return (
     <div className="bg-white min-h-screen pt-32 pb-20 animate-fade-up">
@@ -37,7 +39,7 @@ export const SolutionDetail: React.FC<SolutionDetailProps> = ({ id }) => {
           <span className="uppercase tracking-widest text-sm">{t.nav.back}</span>
         </button>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Header */}
           <div className="mb-12">
             <span className="text-emerald font-black tracking-[0.4em] text-xs uppercase mb-4 block">Detail Solution</span>
@@ -47,45 +49,54 @@ export const SolutionDetail: React.FC<SolutionDetailProps> = ({ id }) => {
           </div>
 
           {/* Featured Image */}
-          <div className="rounded-[3rem] overflow-hidden shadow-2xl mb-16 h-[400px] relative">
+          <div className="rounded-[3rem] overflow-hidden shadow-2xl mb-16 h-[500px] relative bg-navy/10">
             <img 
-              src={images[id]} 
+              src={images[id] || fallbackImg} 
               alt={detail.title} 
               className="w-full h-full object-cover"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = fallbackImg;
+              }}
             />
-            <div className="absolute inset-0 bg-navy/20"></div>
+            <div className="absolute inset-0 bg-navy/10"></div>
           </div>
 
           {/* Content */}
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-3 gap-16">
             <div className="md:col-span-2">
-              <div className="prose prose-lg text-slate-600 font-light leading-relaxed">
+              <div className="prose prose-lg max-w-none text-slate-600 font-light leading-relaxed">
                 {detail.content.split('\n').map((line: string, i: number) => {
-                   if (line.trim().startsWith('-')) {
-                     return <li key={i} className="list-none flex gap-4 mb-4"><span className="text-emerald font-bold">•</span>{line.substring(line.indexOf('-') + 1).trim()}</li>
+                   const trimmedLine = line.trim();
+                   if (trimmedLine.startsWith('-')) {
+                     return (
+                       <li key={i} className="list-none flex gap-4 mb-4">
+                         <span className="text-emerald font-bold mt-1 flex-shrink-0">•</span>
+                         <span>{trimmedLine.substring(1).trim()}</span>
+                       </li>
+                     );
                    }
-                   return <p key={i} className="mb-6">{line}</p>
+                   return trimmedLine ? <p key={i} className="mb-6">{trimmedLine}</p> : <br key={i} />;
                 })}
               </div>
             </div>
 
             {/* Sidebar / CTA */}
             <div className="space-y-8">
-              <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100">
-                <h4 className="text-navy font-bold text-lg mb-4">Request Information</h4>
-                <p className="text-slate-500 text-sm mb-6">Learn how Q MedPartner can transform your healthcare organization.</p>
+              <div className="bg-slate-50 p-10 rounded-[2.5rem] border border-slate-100 shadow-sm">
+                <h4 className="text-navy font-bold text-xl mb-4">Request Information</h4>
+                <p className="text-slate-500 text-sm mb-8 leading-relaxed">Learn how Q MedPartner can transform your healthcare organization through expert HR strategies.</p>
                 <a 
                   href="#contact" 
                   onClick={() => setActiveSolution(null)}
-                  className="block w-full text-center bg-navy text-white py-4 rounded-xl font-bold text-sm uppercase tracking-widest hover:bg-emerald transition-colors shadow-lg shadow-navy/20"
+                  className="block w-full text-center bg-navy text-white py-5 rounded-2xl font-bold text-xs uppercase tracking-[0.2em] hover:bg-emerald transition-all shadow-xl shadow-navy/10 hover:shadow-emerald/20 hover:-translate-y-1"
                 >
                   Contact Us
                 </a>
               </div>
 
-              <div className="p-8 rounded-3xl border border-emerald/20 bg-emerald/5">
-                <h4 className="text-emerald font-bold text-lg mb-4">Support</h4>
-                <p className="text-slate-600 text-sm">Our experts are available for a 1:1 consultation call to discuss your specific needs.</p>
+              <div className="p-10 rounded-[2.5rem] border border-emerald/20 bg-emerald/5">
+                <h4 className="text-emerald font-bold text-xl mb-4">Expert Support</h4>
+                <p className="text-slate-600 text-sm leading-relaxed">Our managing partners are available for a 1:1 consultation call to discuss your specific medical personnel needs.</p>
               </div>
             </div>
           </div>

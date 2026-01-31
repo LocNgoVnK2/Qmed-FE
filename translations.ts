@@ -39,6 +39,18 @@ export const translations = {
       specializedDesc: "Thiết lập hành trình trải nghiệm khách hàng 5 sao. Tái cơ cấu Kiểm soát Nhiễm khuẩn cho bệnh viện, thẩm mỹ viện.",
       learnMore: "Tìm hiểu thêm"
     },
+    whyChooseUs: {
+      title: "TẠI SAO CHỌN CHÚNG TÔI",
+      subtitle: "Sự khác biệt tạo nên đẳng cấp trong tư vấn nhân sự y tế.",
+      point1: "Am hiểu chuyên sâu",
+      point1Desc: "Sở hữu kiến thức sâu rộng về pháp lý, văn hóa và yêu cầu đặc thù của ngành Y Dược tại Việt Nam.",
+      point2: "Mạng lưới tinh hoa",
+      point2Desc: "Kết nối trực tiếp với cộng đồng bác sĩ, chuyên gia đầu ngành và quản lý bệnh viện cao cấp.",
+      point3: "Giải pháp trọn gói",
+      point3Desc: "Từ tuyển dụng, tính lương đến kiểm toán - mọi nhu cầu nhân sự được giải quyết tại một điểm dừng.",
+      point4: "Đồng hành chiến lược",
+      point4Desc: "Chúng tôi không chỉ là đơn vị tư vấn, mà là người đồng hành cùng sự phát triển bền vững của bạn."
+    },
     details: {
       recruitment: {
         title: "Dịch Vụ Tuyển Dụng Chuyên Biệt Y Tế",
@@ -130,6 +142,18 @@ export const translations = {
       specialized: "SPECIFIC SERVICES",
       specializedDesc: "Establish 5-star customer experience journeys. Restructuring Infection Control for hospitals and beauty clinics.",
       learnMore: "Learn more"
+    },
+    whyChooseUs: {
+      title: "WHY CHOOSE US",
+      subtitle: "The excellence that distinguishes medical HR consulting.",
+      point1: "In-depth Expertise",
+      point1Desc: "Profound knowledge of legal, cultural, and specialized requirements within Vietnam's healthcare sector.",
+      point2: "Elite Network",
+      point2Desc: "Direct connections to the community of doctors, leading specialists, and senior hospital administrators.",
+      point3: "Turnkey Solutions",
+      point3Desc: "From recruitment to payroll and audits - all your HR needs addressed in one unified stop.",
+      point4: "Strategic Companion",
+      point4Desc: "We are more than consultants; we are partners in your long-term, sustainable growth."
     },
     details: {
       recruitment: {

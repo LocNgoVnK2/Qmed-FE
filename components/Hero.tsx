@@ -57,10 +57,12 @@ export const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Bottom Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
-        <div className="w-[1px] h-12 bg-gradient-to-b from-transparent via-emerald to-transparent"></div>
-        <span className="text-[10px] text-white font-bold uppercase tracking-[0.5em] rotate-90 translate-y-8">Scroll</span>
+      {/* Bottom Scroll Indicator - Fixed vertical text and clipping */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-40">
+        <div className="w-[1px] h-16 bg-gradient-to-b from-transparent via-emerald to-transparent"></div>
+        <div className="relative h-12">
+            <span className="text-[9px] text-white font-bold uppercase tracking-[0.4em] whitespace-nowrap [writing-mode:vertical-lr]">Scroll</span>
+        </div>
       </div>
     </section>
   );

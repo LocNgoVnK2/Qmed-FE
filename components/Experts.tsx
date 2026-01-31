@@ -12,7 +12,7 @@ export const Experts: React.FC = () => {
     },
     { 
       data: t.experts.hang, 
-      img: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=600&h=800' 
+      img: 'https://images.unsplash.com/photo-1559839734-2b71f1536780?auto=format&fit=crop&q=80&w=600&h=800' 
     },
     { 
       data: t.experts.thu, 
@@ -38,11 +38,14 @@ export const Experts: React.FC = () => {
         <div className="grid lg:grid-cols-3 gap-10">
           {team.map((person, idx) => (
             <div key={idx} className="flex flex-col h-full group">
-              <div className="relative aspect-[3/4] rounded-[2.5rem] overflow-hidden mb-8 shadow-2xl transition-all duration-700 group-hover:-translate-y-4">
+              <div className="relative aspect-[3/4] rounded-[2.5rem] overflow-hidden mb-8 shadow-2xl transition-all duration-700 group-hover:-translate-y-4 bg-navy">
                 <img 
                   src={person.img} 
                   alt={person.data.name} 
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110" 
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600&h=800";
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
                 

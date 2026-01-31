@@ -13,11 +13,14 @@ export const MarketInsight: React.FC = () => {
           <div className="lg:w-1/2 relative min-h-[500px]">
             <div className="absolute top-0 left-0 w-full h-full rounded-[3rem] overflow-hidden shadow-3xl bg-navy group">
               <img 
-                src="https://images.unsplash.com/photo-1576091160550-2173bdd99802?auto=format&fit=crop&q=80&w=1200&h=800" 
-                alt="Healthcare Innovation and Quality" 
-                className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-1000 grayscale group-hover:grayscale-0"
+                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200&h=800" 
+                alt="Healthcare Excellence" 
+                className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-1000 grayscale group-hover:grayscale-0"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1576091160550-2173bdd99802?auto=format&fit=crop&q=80&w=1200&h=800";
+                }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent"></div>
             </div>
             
             {/* Stats Overlay */}
