@@ -11,21 +11,47 @@ export const translations = {
       back: "Quay lại"
     },
     hero: {
-      title: "GIỚI THIỆU TỔNG QUAN",
+      title: "GIỚI THIỆU|TỔNG QUAN",
+      quote: "Nâng tầm ngành y tế Việt Nam thông qua chiến lược thu hút nhân tài và vận hành xuất sắc.",
       vision: "TẦM NHÌN",
-      visionDesc: "Trở thành đối tác tư vấn nhân sự hàng đầu và đáng tin cậy trong lĩnh vực sức khỏe, y tế tại Việt Nam, góp phần nâng cao chất lượng đội ngũ và hiệu quả vận hành cho các tổ chức trong ngành với vai trò là người đồng hành.",
+      visionDesc: "« Trở thành đối tác tư vấn nhân sự hàng đầu và đáng tin cậy trong lĩnh vực sức khỏe, y tế tại Việt Nam, góp phần nâng cao chất lượng đội ngũ và hiệu quả vận hành cho các tổ chức trong ngành với vai trò là người đồng hành. »",
       mission: "SỨ MỆNH",
       missionDesc: "Cung cấp các giải pháp nhân sự toàn diện, chuyên sâu và linh hoạt, từ tìm kiếm nhân tài, tối ưu hóa cơ cấu tổ chức đến vận hành hiệu quả, giúp khách hàng tập trung vào chuyên môn cốt lõi và đồng hành cùng khách hàng phát triển bền vững."
     },
-    market: {
-      title: "GIÁ TRỊ",
-      intro: "Ngành y dược nhất là y dược tư nhân tại Việt Nam đang bùng nổ, dẫn đến nhu cầu lớn về nhân sự chất lượng cao, đặc thù ở mọi cấp bậc. Các tổ chức này thường đối mặt với thách thức trong việc tuyển dụng và giữ chân nhân tài do tính cạnh tranh cao và yêu cầu chuyên môn đặc thù.",
-      value1: "Chuyên môn hóa sâu: Am hiểu sâu sắc đặc thù ngành y dược (văn hóa, yêu cầu công việc, pháp lý).",
-      value2: "Mạng lưới ứng viên chất lượng: Sở hữu mạng lưới ứng viên bác sĩ, chuyên gia y dược, quản lý bệnh viện, phòng khám, nhà thuốc... rộng khắp và chất lượng.",
-      value3: "Giải pháp toàn diện: Cung cấp dịch vụ 'một cửa' (one-stop-shop) cho mọi nhu cầu về nhân sự của khách hàng."
+    courses: {
+      title: "CÁC KHÓA HỌC CHUYÊN SÂU",
+      subtitle: "Đào tạo thực chiến dành riêng cho nhân sự và quản lý ngành y tế.",
+      register: "Đăng ký ngay",
+      items: [
+        { id: 'c1', title: "Recruitment Masterclass", desc: "Kỹ thuật tuyển dụng bác sĩ và nhân sự y tế cao cấp." },
+        { id: 'c2', title: "C&B Professional", desc: "Quản trị tiền lương và phúc lợi đặc thù bệnh viện." },
+        { id: 'c3', title: "HR Audit Essentials", desc: "Kỹ năng rà soát và kiểm toán nhân sự tuân thủ pháp luật." },
+        { id: 'c4', title: "Medical Service Excellence", desc: "Xây dựng văn hóa phục vụ 5 sao trong y tế." }
+      ]
+    },
+    ebooks: {
+      title: "THƯ VIỆN EBOOK",
+      subtitle: "Kiến thức độc quyền từ các chuyên gia hàng đầu.",
+      download: "Tải xuống ngay",
+      items: [
+        { id: 'e1', title: "Báo cáo Thị trường Nhân sự Y tế 2024", desc: "Xu hướng và biến động lương ngành y dược." },
+        { id: 'e2', title: "Cẩm nang HR Setup cho Phòng khám", desc: "Quy trình thiết lập bộ máy nhân sự từ A-Z." },
+        { id: 'e3', title: "Luật Lao động & Y tế", desc: "Tổng hợp các quy định pháp luật mới nhất cần lưu ý." }
+      ]
+    },
+    forms: {
+      registerTitle: "ĐĂNG KÝ KHÓA HỌC",
+      downloadTitle: "NHẬN TÀI LIỆU EBOOK",
+      name: "Họ và tên",
+      email: "Email",
+      phone: "Số điện thoại",
+      company: "Đơn vị công tác",
+      submit: "Gửi thông tin",
+      success: "Cảm ơn bạn! Chúng tôi sẽ liên hệ sớm nhất."
     },
     solutions: {
       title: "GIẢI PHÁP",
+      subtitle: "TẤT CẢ DỊCH VỤ",
       recruitment: "TUYỂN DỤNG CHUYÊN BIỆT",
       recruitmentDesc: "Dành riêng cho bệnh viện, phòng khám, và ngành y dược. Bao gồm C-Level, các vị trí chuyên môn đặc thù, dự án phòng khám, nhà thuốc.",
       audit: "KIỂM TOÁN NHÂN SỰ",
@@ -40,8 +66,15 @@ export const translations = {
       specializedDesc: "Thiết lập hành trình trải nghiệm khách hàng 5 sao. Tái cơ cấu Kiểm soát Nhiễm khuẩn cho bệnh viện, thẩm mỹ viện.",
       learnMore: "Tìm hiểu thêm"
     },
+    market: {
+      title: "GIÁ TRỊ",
+      intro: "Ngành y dược nhất là y dược tư nhân tại Việt Nam đang bùng nổ, dẫn đến nhu cầu lớn về nhân sự chất lượng cao, đặc thù ở mọi cấp bậc. Các tổ chức này thường đối mặt với thách thức trong việc tuyển dụng và giữ chân nhân tài do tính cạnh tranh cao và yêu cầu chuyên môn đặc thù.",
+      value1: "Chuyên môn hóa sâu: Am hiểu sâu sắc đặc thù ngành y dược (văn hóa, yêu cầu công việc, pháp lý).",
+      value2: "Mạng lưới ứng viên chất lượng: Sở hữu mạng lưới ứng viên bác sĩ, chuyên gia y dược, quản lý bệnh viện, phòng khám, nhà thuốc... rộng khắp và chất lượng.",
+      value3: "Giải pháp toàn diện: Cung cấp dịch vụ 'một cửa' (one-stop-shop) cho mọi nhu cầu về nhân sự của khách hàng."
+    },
     whyChooseUs: {
-      title: "TẠI SAO CHỌN CHÚNG TÔI",
+      title: "TẠI SAO CHÔNG CHÚNG TÔI",
       subtitle: "Sự khác biệt tạo nên đẳng cấp trong tư vấn nhân sự y tế.",
       point1: "Am hiểu chuyên sâu",
       point1Desc: "Sở hữu kiến thức sâu rộng về pháp lý, văn hóa và yêu cầu đặc thù của ngành Y Dược tại Việt Nam.",
@@ -115,7 +148,7 @@ export const translations = {
         name: "HẰNG TRỊNH",
         role: "Advisor",
         title: "Chuyên môn Y tế",
-        desc: "Bác sĩ Hằng hội tụ cả tư duy sắc bén của một nhà quản lý tại các tập đoàn đa quốc gia và trái tim ấm áp của một người thầy thuốc; kết hợp y học hiện đại with kỹ năng 'lắng nghe thiền hành' nâng tầm Trải nghiệm khách hàng cho khối Y tế (Abbott, Samsung...)."
+        desc: "Bác sĩ Hằng hội tụ cả tư duy sắc bén của một nhà quản lý tại các tập đoàn đa quốc gia và trái tim ấm áp của một người thầy thuốc; kết hợp y học hiện đại với kỹ năng 'lắng nghe thiền hành' nâng tầm Trải nghiệm khách hàng cho khối Y tế (Abbott, Samsung...)."
       },
       thu: {
         name: "THƯ NGÔ",
@@ -141,21 +174,54 @@ export const translations = {
       back: "Back"
     },
     hero: {
-      title: "OVERVIEW INTRODUCTION",
+      title: "GENERAL INTRODUCTION|OVERVIEW",
+      quote: "Empowering Vietnam's booming healthcare sector through strategic talent acquisition and operational excellence.",
       vision: "VISION",
-      visionDesc: "To become the leading and most trusted HR consulting partner in the healthcare and medical sector in Vietnam, contributing to improving the quality of personnel and operational efficiency for organizations in the industry as a companion.",
+      visionDesc: "\"To become the leading and most trusted HR consulting partner in the healthcare and medical sector in Vietnam, contributing to improving the quality of personnel and operational efficiency for organizations in the industry as a companion.\"",
       mission: "MISSION",
       missionDesc: "Providing comprehensive, in-depth, and flexible HR solutions, from talent acquisition, organizational structure optimization to effective operation, helping customers focus on core expertise and partnering with them for sustainable development."
+    },
+    courses: {
+      title: "ADVANCED COURSES",
+      subtitle: "Practical training dedicated to healthcare HR and management.",
+      register: "Register Now",
+      items: [
+        { id: 'c1', title: "Recruitment Masterclass", desc: "Techniques for recruiting doctors and senior medical staff." },
+        { id: 'c2', title: "C&B Professional", desc: "Hospital-specific compensation and benefits management." },
+        { id: 'c3', title: "HR Audit Essentials", desc: "Compliance and auditing skills for healthcare organizations." },
+        { id: 'c4', title: "Medical Service Excellence", desc: "Building a 5-star service culture in healthcare." }
+      ]
+    },
+    ebooks: {
+      title: "EBOOK LIBRARY",
+      subtitle: "Exclusive insights from industry-leading experts.",
+      download: "Download Now",
+      items: [
+        { id: 'e1', title: "Medical HR Market Report 2024", desc: "Trends and salary fluctuations in the healthcare sector." },
+        { id: 'e2', title: "HR Setup Guide for Clinics", desc: "Step-by-step personnel department setup guide." },
+        { id: 'e3', title: "Labor Law in Healthcare", desc: "Summary of the latest legal regulations to note." }
+      ]
+    },
+    forms: {
+      registerTitle: "COURSE REGISTRATION",
+      downloadTitle: "GET YOUR EBOOK",
+      name: "Full Name",
+      email: "Email",
+      phone: "Phone Number",
+      company: "Organization",
+      submit: "Submit",
+      success: "Thank you! We will be in touch shortly."
     },
     market: {
       title: "VALUES",
       intro: "The healthcare and pharmaceutical industry, especially the private sector in Vietnam, is booming, leading to a great demand for high-quality personnel at all levels. These organizations often face challenges in recruiting and retaining talent due to high competition and specialized requirements.",
       value1: "Deep Specialization: Profound understanding of healthcare industry specifics (culture, job requirements, legal).",
-      value2: "Quality Candidate Network: Owning a wide and high-quality network of doctors, medical experts, hospital managers, clinics, and pharmacies.",
-      value3: "Comprehensive Solution: Providing a 'one-stop-shop' service for all HR needs of customers."
+      value2: "Elite Network: Owning a wide and high-quality network of doctors, medical experts, hospital managers, clinics, and pharmacies.",
+      value3: "Comprehensive Solutions: Providing a 'one-stop-shop' service for all HR needs of our customers."
     },
     solutions: {
       title: "SOLUTIONS",
+      subtitle: "ALL SERVICES",
       recruitment: "SPECIALIZED RECRUITMENT",
       recruitmentDesc: "Dedicated to hospitals, clinics, and the pharmaceutical industry. Including C-Level, specialized positions, clinic projects, and pharmacies.",
       audit: "HR AUDIT",

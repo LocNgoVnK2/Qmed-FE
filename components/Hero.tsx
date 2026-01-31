@@ -5,10 +5,8 @@ import { useTranslation } from '../App';
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
 
-  // Robust splitting of the title to prevent rendering issues
-  const titleParts = t.hero.title.split(' ');
-  const firstWord = titleParts[0];
-  const restOfTitle = titleParts.slice(1).join(' ');
+  // Split title by | character to ensure precise control over lines and colors
+  const [line1, line2] = t.hero.title.split('|');
 
   const handleScrollToSolutions = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -43,14 +41,14 @@ export const Hero: React.FC = () => {
               <span className="w-2 h-2 rounded-full bg-emerald animate-pulse"></span>
               Specialized Medical HR
             </span>
-            <h1 className="text-white text-5xl md:text-8xl font-extrabold mb-8 tracking-tighter leading-[0.95] lg:max-w-3xl">
-              {firstWord} <br/>
-              <span className="text-emerald">
-                {restOfTitle}
+            <h1 className="text-white text-5xl md:text-8xl font-extrabold mb-8 tracking-tighter leading-[1.05] lg:max-w-4xl">
+              <span className="block">{line1}</span>
+              <span className="text-emerald block mt-2">
+                {line2}
               </span>
             </h1>
             <p className="text-white/80 max-w-xl text-xl font-light leading-relaxed mb-10 border-l-2 border-emerald/30 pl-6">
-              Empowering Vietnam's booming healthcare sector through strategic talent acquisition and operational excellence.
+              {t.hero.quote}
             </p>
             
             <div className="flex flex-wrap gap-4">
@@ -77,7 +75,7 @@ export const Hero: React.FC = () => {
                 <h3 className="text-white text-xl font-bold tracking-tight uppercase">{t.hero.vision}</h3>
               </div>
               <p className="text-white/90 leading-relaxed font-light italic text-base">
-                "{t.hero.visionDesc}"
+                {t.hero.visionDesc}
               </p>
             </div>
 
@@ -94,20 +92,6 @@ export const Hero: React.FC = () => {
                 {t.hero.missionDesc}
               </p>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Floating Stats */}
-      <div className="absolute bottom-12 right-12 hidden xl:block animate-fade-up" style={{animationDelay: '0.6s'}}>
-        <div className="flex gap-12">
-          <div className="text-center">
-            <div className="text-white text-3xl font-black">20+</div>
-            <div className="text-emerald text-[10px] font-bold tracking-widest uppercase opacity-60">Years XP</div>
-          </div>
-          <div className="text-center">
-            <div className="text-white text-3xl font-black">100%</div>
-            <div className="text-emerald text-[10px] font-bold tracking-widest uppercase opacity-60">Medical Focus</div>
           </div>
         </div>
       </div>

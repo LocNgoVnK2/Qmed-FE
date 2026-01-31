@@ -10,6 +10,8 @@ import { News } from './components/News';
 import { Experts } from './components/Experts';
 import { Footer } from './components/Footer';
 import { SolutionDetail } from './components/SolutionDetail';
+import { Courses } from './components/Courses';
+import { Ebooks } from './components/Ebooks';
 
 type Language = 'vi' | 'en';
 
@@ -70,8 +72,10 @@ const App: React.FC = () => {
               <Hero />
               <MarketInsight />
               <Solutions />
+              <Courses />
               <WhyChooseUs />
               <News />
+              <Ebooks />
               <Experts />
             </>
           )}

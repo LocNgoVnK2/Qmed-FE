@@ -18,7 +18,7 @@ export const Solutions: React.FC = () => {
     <section id="solutions" className="py-24 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
-          <span className="text-emerald font-bold tracking-[0.3em] text-sm uppercase mb-4 block">{t.nav.allCourses}</span>
+          <span className="text-emerald font-bold tracking-[0.3em] text-sm uppercase mb-4 block">{t.solutions.subtitle}</span>
           <h2 className="text-navy text-4xl md:text-5xl font-bold mb-6">{t.solutions.title}</h2>
           <div className="w-20 h-1 bg-navy mx-auto"></div>
         </div>

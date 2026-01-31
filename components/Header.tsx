@@ -14,6 +14,15 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    setActiveSolution(null);
+    const element = document.querySelector(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
@@ -40,9 +49,9 @@ export const Header: React.FC = () => {
         {/* Desktop Navigation */}
         <nav className="hidden xl:flex items-center gap-1">
           {[
-            { label: t.nav.goCourse, href: '#' },
-            { label: t.nav.allCourses, href: '#solutions' },
-            { label: t.nav.ebook, href: '#' },
+            { label: t.nav.goCourse, href: '#courses' },
+            { label: t.nav.allCourses, href: '#courses' },
+            { label: t.nav.ebook, href: '#ebooks' },
             { label: t.nav.news, href: '#news' },
             { label: t.nav.contact, href: '#contact' },
             { label: t.nav.support, href: '#' }
@@ -50,6 +59,7 @@ export const Header: React.FC = () => {
             <a 
               key={idx} 
               href={item.href} 
+              onClick={(e) => item.href.startsWith('#') && scrollToSection(e, item.href)}
               className="px-4 py-2 text-white hover:text-emerald transition-all font-semibold text-xs uppercase tracking-widest relative group"
             >
               {item.label}

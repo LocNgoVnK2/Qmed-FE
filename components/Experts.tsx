@@ -42,7 +42,7 @@ export const Experts: React.FC = () => {
                 <img 
                   src={person.img} 
                   alt={person.data.name} 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110" 
+                  className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110" 
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600&h=800";
                   }}

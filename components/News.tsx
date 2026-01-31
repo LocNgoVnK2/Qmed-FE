@@ -5,9 +5,9 @@ import { useTranslation } from '../App';
 export const News: React.FC = () => {
   const { t } = useTranslation();
 
-  // Use reliable healthcare-themed images from Unsplash
+  // Optimized reliable healthcare images
   const images = [
-    "https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&q=80&w=1200",
     "https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&q=80&w=800",
     "https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?auto=format&fit=crop&q=80&w=800"
   ];
@@ -48,7 +48,8 @@ export const News: React.FC = () => {
               <img 
                 src={images[0]} 
                 alt={newsItems[0].title} 
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-60" 
+                loading="lazy"
               />
               {/* Ensure high contrast with a strong navy gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent"></div>
@@ -92,6 +93,7 @@ export const News: React.FC = () => {
                     src={images[idx + 1]} 
                     alt={item.title} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                    loading="lazy"
                   />
                 </div>
                 <div className="flex-grow">
