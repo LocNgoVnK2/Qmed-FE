@@ -5,6 +5,11 @@ import { useTranslation } from '../App';
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
 
+  // Robust splitting of the title to prevent rendering issues
+  const titleParts = t.hero.title.split(' ');
+  const firstWord = titleParts[0];
+  const restOfTitle = titleParts.slice(1).join(' ');
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-navy">
       {/* Background Visual Layer */}
@@ -31,9 +36,9 @@ export const Hero: React.FC = () => {
               Specialized Medical HR
             </span>
             <h1 className="text-white text-5xl md:text-8xl font-extrabold mb-8 tracking-tighter leading-[0.95] lg:max-w-3xl">
-              {t.hero.title.split(' ')[0]} <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald to-emerald/50">
-                {t.hero.title.split(' ').slice(1).join(' ')}
+              {firstWord} <br/>
+              <span className="text-emerald">
+                {restOfTitle}
               </span>
             </h1>
             <p className="text-white/50 max-w-xl text-xl font-light leading-relaxed mb-10 border-l-2 border-emerald/30 pl-6">

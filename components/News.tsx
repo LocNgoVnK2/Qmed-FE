@@ -78,10 +78,10 @@ export const News: React.FC = () => {
 
           {/* Vertical Stack (Right) */}
           <div className="lg:col-span-5 flex flex-col gap-8">
-            {newsItems.slice(1).map((item: any, idx: number) => (
+            {newsItems.slice(1, 3).map((item: any, idx: number) => (
               <article 
                 key={idx} 
-                className="group bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 hover:bg-white hover:shadow-xl transition-all duration-500 flex flex-col md:flex-row gap-8 items-center"
+                className="group bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 hover:bg-white hover:shadow-xl transition-all duration-500 flex flex-col md:flex-row gap-8 items-center h-full"
               >
                 <div className="w-full md:w-40 h-40 flex-shrink-0 rounded-2xl overflow-hidden">
                   <img 
@@ -108,21 +108,6 @@ export const News: React.FC = () => {
                 </div>
               </article>
             ))}
-
-            {/* Newsletter CTA placeholder card */}
-            <div className="bg-navy p-8 rounded-[2.5rem] text-white flex flex-col justify-center items-center text-center">
-              <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-6">
-                 <svg className="w-6 h-6 text-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                 </svg>
-              </div>
-              <h4 className="text-xl font-bold mb-2">Join Our Insight List</h4>
-              <p className="text-white/50 text-xs font-light mb-6">Receive curated medical HR intelligence monthly.</p>
-              <div className="flex w-full bg-white/5 border border-white/10 rounded-xl p-1">
-                 <input type="text" placeholder="Email" className="bg-transparent border-none text-white text-xs p-3 w-full focus:outline-none" />
-                 <button className="bg-emerald text-navy px-4 rounded-lg font-black text-[10px] uppercase tracking-widest">Join</button>
-              </div>
-            </div>
           </div>
         </div>
       </div>
