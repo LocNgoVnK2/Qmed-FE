@@ -32,11 +32,19 @@ export const useTranslation = () => {
 const App: React.FC = () => {
   const [lang, setLang] = useState<Language>('vi');
   const [activeSolution, setActiveSolution] = useState<string | null>(null);
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
   const t = translations[lang];
 
   useEffect(() => {
     document.documentElement.lang = lang;
+    
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 400);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [lang]);
 
   // Scroll to top when opening a detail page
@@ -46,9 +54,13 @@ const App: React.FC = () => {
     }
   }, [activeSolution]);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <LanguageContext.Provider value={{ lang, setLang, t, activeSolution, setActiveSolution }}>
-      <div className="min-h-screen">
+      <div className="min-h-screen relative">
         <Header />
         <main>
           {activeSolution ? (
@@ -65,6 +77,17 @@ const App: React.FC = () => {
           )}
         </main>
         <Footer />
+
+        {/* Back to Top Button */}
+        <button 
+          onClick={scrollToTop}
+          className={`fixed bottom-10 right-10 z-[110] w-14 h-14 bg-emerald text-navy rounded-full shadow-2xl flex items-center justify-center transition-all duration-500 transform ${showBackToTop ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'} hover:-translate-y-2 hover:bg-white border-2 border-emerald group`}
+          aria-label="Back to Top"
+        >
+          <svg className="w-6 h-6 transform group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+        </button>
       </div>
     </LanguageContext.Provider>
   );

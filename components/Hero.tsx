@@ -17,9 +17,9 @@ export const Hero: React.FC = () => {
         <img 
           src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=2000" 
           alt="Modern Healthcare" 
-          className="w-full h-full object-cover opacity-30 scale-105 animate-[zoom-slow_20s_infinite_alternate]"
+          className="w-full h-full object-cover opacity-40 scale-105 animate-[zoom-slow_20s_infinite_alternate]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent"></div>
       </div>
 
@@ -41,16 +41,16 @@ export const Hero: React.FC = () => {
                 {restOfTitle}
               </span>
             </h1>
-            <p className="text-white/50 max-w-xl text-xl font-light leading-relaxed mb-10 border-l-2 border-emerald/30 pl-6">
+            <p className="text-white/70 max-w-xl text-xl font-light leading-relaxed mb-10 border-l-2 border-emerald/30 pl-6">
               Empowering Vietnam's booming healthcare sector through strategic talent acquisition and operational excellence.
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <a href="#solutions" className="px-10 py-5 bg-emerald text-navy font-black text-xs uppercase tracking-widest rounded-2xl hover:bg-white transition-all shadow-2xl shadow-emerald/20 hover:-translate-y-1">
+              <a 
+                href="#solutions" 
+                className="px-10 py-5 bg-emerald text-navy font-black text-xs uppercase tracking-widest rounded-2xl hover:bg-white transition-all shadow-2xl shadow-emerald/20 hover:-translate-y-1 inline-block"
+              >
                 Explore Solutions
-              </a>
-              <a href="#contact" className="px-10 py-5 bg-white/5 backdrop-blur-md text-white border border-white/10 font-black text-xs uppercase tracking-widest rounded-2xl hover:bg-white/10 transition-all hover:-translate-y-1">
-                Get In Touch
               </a>
             </div>
           </div>
@@ -67,7 +67,7 @@ export const Hero: React.FC = () => {
                 </div>
                 <h3 className="text-white text-xl font-bold tracking-tight uppercase">{t.hero.vision}</h3>
               </div>
-              <p className="text-white/60 leading-relaxed font-light italic text-base">
+              <p className="text-white/80 leading-relaxed font-light italic text-base">
                 "{t.hero.visionDesc}"
               </p>
             </div>
@@ -81,7 +81,7 @@ export const Hero: React.FC = () => {
                 </div>
                 <h3 className="text-white text-xl font-bold tracking-tight uppercase">{t.hero.mission}</h3>
               </div>
-              <p className="text-white/60 leading-relaxed font-light text-base">
+              <p className="text-white/80 leading-relaxed font-light text-base">
                 {t.hero.missionDesc}
               </p>
             </div>
