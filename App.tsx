@@ -80,10 +80,12 @@ const App: React.FC = () => {
             <Hero />
             <MarketInsight />
             <Solutions />
-            <Courses />
+            {/* Show only top 3 on Home */}
+            <Courses limit={3} />
             <WhyChooseUs />
             <News />
-            <Ebooks />
+            {/* Show only top 3 on Home */}
+            <Ebooks limit={3} />
             <Experts />
           </>
         );
