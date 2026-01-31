@@ -12,8 +12,11 @@ import { Footer } from './components/Footer';
 import { SolutionDetail } from './components/SolutionDetail';
 import { Courses } from './components/Courses';
 import { Ebooks } from './components/Ebooks';
+import { ContactPage } from './components/ContactPage';
+import { SupportPage } from './components/SupportPage';
 
 type Language = 'vi' | 'en';
+type View = 'home' | 'courses' | 'ebooks' | 'news' | 'contact' | 'support' | 'solution-detail';
 
 interface LanguageContextType {
   lang: Language;
@@ -21,6 +24,8 @@ interface LanguageContextType {
   t: any;
   activeSolution: string | null;
   setActiveSolution: (id: string | null) => void;
+  currentView: View;
+  setCurrentView: (v: View) => void;
 }
 
 export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -33,6 +38,7 @@ export const useTranslation = () => {
 
 const App: React.FC = () => {
   const [lang, setLang] = useState<Language>('vi');
+  const [currentView, setCurrentView] = useState<View>('home');
   const [activeSolution, setActiveSolution] = useState<string | null>(null);
   const [showBackToTop, setShowBackToTop] = useState(false);
 
@@ -40,51 +46,63 @@ const App: React.FC = () => {
 
   useEffect(() => {
     document.documentElement.lang = lang;
-    
     const handleScroll = () => {
       setShowBackToTop(window.scrollY > 400);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lang]);
 
-  // Scroll to top when opening a detail page
   useEffect(() => {
-    if (activeSolution) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  }, [activeSolution]);
-
-  const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentView, activeSolution]);
+
+  const renderView = () => {
+    if (activeSolution) {
+      return <SolutionDetail id={activeSolution} />;
+    }
+
+    switch (currentView) {
+      case 'courses':
+        return <div className="pt-20 animate-fade-up"><Courses /></div>;
+      case 'ebooks':
+        return <div className="pt-20 animate-fade-up"><Ebooks /></div>;
+      case 'news':
+        return <div className="pt-20 animate-fade-up"><News /></div>;
+      case 'contact':
+        return <div className="pt-20 animate-fade-up"><ContactPage /></div>;
+      case 'support':
+        return <div className="pt-20 animate-fade-up"><SupportPage /></div>;
+      case 'home':
+      default:
+        return (
+          <>
+            <Hero />
+            <MarketInsight />
+            <Solutions />
+            <Courses />
+            <WhyChooseUs />
+            <News />
+            <Ebooks />
+            <Experts />
+          </>
+        );
+    }
   };
 
   return (
-    <LanguageContext.Provider value={{ lang, setLang, t, activeSolution, setActiveSolution }}>
-      <div className="min-h-screen relative">
+    <LanguageContext.Provider value={{ 
+      lang, setLang, t, activeSolution, setActiveSolution, currentView, setCurrentView 
+    }}>
+      <div className="min-h-screen relative font-['Montserrat'] bg-white">
         <Header />
         <main>
-          {activeSolution ? (
-            <SolutionDetail id={activeSolution} />
-          ) : (
-            <>
-              <Hero />
-              <MarketInsight />
-              <Solutions />
-              <Courses />
-              <WhyChooseUs />
-              <News />
-              <Ebooks />
-              <Experts />
-            </>
-          )}
+          {renderView()}
         </main>
         <Footer />
 
-        {/* Back to Top Button */}
         <button 
-          onClick={scrollToTop}
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className={`fixed bottom-10 right-10 z-[110] w-14 h-14 bg-emerald text-navy rounded-full shadow-2xl flex items-center justify-center transition-all duration-500 transform ${showBackToTop ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'} hover:-translate-y-2 hover:bg-white border-2 border-emerald group`}
           aria-label="Back to Top"
         >

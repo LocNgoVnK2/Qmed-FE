@@ -26,7 +26,9 @@ export const translations = {
         { id: 'c1', title: "Recruitment Masterclass", desc: "Kỹ thuật tuyển dụng bác sĩ và nhân sự y tế cao cấp." },
         { id: 'c2', title: "C&B Professional", desc: "Quản trị tiền lương và phúc lợi đặc thù bệnh viện." },
         { id: 'c3', title: "HR Audit Essentials", desc: "Kỹ năng rà soát và kiểm toán nhân sự tuân thủ pháp luật." },
-        { id: 'c4', title: "Medical Service Excellence", desc: "Xây dựng văn hóa phục vụ 5 sao trong y tế." }
+        { id: 'c4', title: "Medical Service Excellence", desc: "Xây dựng văn hóa phục vụ 5 sao trong y tế." },
+        { id: 'c5', title: "Healthcare Leadership", desc: "Kỹ năng lãnh đạo và quản trị vận hành bệnh viện hiện đại." },
+        { id: 'c6', title: "Patient Experience Lab", desc: "Xây dựng quy trình trải nghiệm bệnh nhân chuẩn quốc tế." }
       ]
     },
     ebooks: {
@@ -36,7 +38,8 @@ export const translations = {
       items: [
         { id: 'e1', title: "Báo cáo Thị trường Nhân sự Y tế 2024", desc: "Xu hướng và biến động lương ngành y dược." },
         { id: 'e2', title: "Cẩm nang HR Setup cho Phòng khám", desc: "Quy trình thiết lập bộ máy nhân sự từ A-Z." },
-        { id: 'e3', title: "Luật Lao động & Y tế", desc: "Tổng hợp các quy định pháp luật mới nhất cần lưu ý." }
+        { id: 'e3', title: "Luật Lao động & Y tế", desc: "Tổng hợp các quy định pháp luật mới nhất cần lưu ý." },
+        { id: 'e4', title: "Cẩm nang Chăm sóc Khách hàng Y tế", desc: "Bí quyết nâng cao sự hài lòng của bệnh nhân." }
       ]
     },
     forms: {
@@ -47,7 +50,10 @@ export const translations = {
       phone: "Số điện thoại",
       company: "Đơn vị công tác",
       submit: "Gửi thông tin",
-      success: "Cảm ơn bạn! Chúng tôi sẽ liên hệ sớm nhất."
+      success: "Cảm ơn bạn! Chúng tôi sẽ liên hệ sớm nhất.",
+      message: "Lời nhắn của bạn",
+      supportTag: "Bạn cần hỗ trợ về?",
+      tags: ["Tư vấn khóa học", "Lỗi kỹ thuật", "Hợp tác đào tạo", "Vấn đề thanh toán", "Khác"]
     },
     solutions: {
       title: "GIẢI PHÁP",
@@ -107,6 +113,12 @@ export const translations = {
           date: "05 Tháng 5, 2024",
           title: "Q MedPartner tổ chức Workshop Đào tạo C&B",
           desc: "Buổi chia sẻ về kỹ năng quản lý lương thưởng đặc thù cho ngành Dược phẩm."
+        },
+        {
+          tag: "Góc nhìn",
+          date: "01 Tháng 5, 2024",
+          title: "Văn hóa 5 sao trong Bệnh viện tư nhân",
+          desc: "Làm thế nào để xây dựng đội ngũ nhân sự có tư duy dịch vụ xuất sắc?"
         }
       ]
     },
@@ -189,7 +201,9 @@ export const translations = {
         { id: 'c1', title: "Recruitment Masterclass", desc: "Techniques for recruiting doctors and senior medical staff." },
         { id: 'c2', title: "C&B Professional", desc: "Hospital-specific compensation and benefits management." },
         { id: 'c3', title: "HR Audit Essentials", desc: "Compliance and auditing skills for healthcare organizations." },
-        { id: 'c4', title: "Medical Service Excellence", desc: "Building a 5-star service culture in healthcare." }
+        { id: 'c4', title: "Medical Service Excellence", desc: "Building a 5-star service culture in healthcare." },
+        { id: 'c5', title: "Healthcare Leadership", desc: "Skills for leadership and operational management of modern hospitals." },
+        { id: 'c6', title: "Patient Experience Lab", desc: "Developing international-standard patient experience processes." }
       ]
     },
     ebooks: {
@@ -199,7 +213,8 @@ export const translations = {
       items: [
         { id: 'e1', title: "Medical HR Market Report 2024", desc: "Trends and salary fluctuations in the healthcare sector." },
         { id: 'e2', title: "HR Setup Guide for Clinics", desc: "Step-by-step personnel department setup guide." },
-        { id: 'e3', title: "Labor Law in Healthcare", desc: "Summary of the latest legal regulations to note." }
+        { id: 'e3', title: "Labor Law in Healthcare", desc: "Summary of the latest legal regulations to note." },
+        { id: 'e4', title: "Medical Customer Care Handbook", desc: "Secrets to enhancing patient satisfaction." }
       ]
     },
     forms: {
@@ -210,7 +225,10 @@ export const translations = {
       phone: "Phone Number",
       company: "Organization",
       submit: "Submit",
-      success: "Thank you! We will be in touch shortly."
+      success: "Thank you! We will be in touch shortly.",
+      message: "Your message",
+      supportTag: "What do you need help with?",
+      tags: ["Course Inquiry", "Technical Support", "Training Partnership", "Payment Issues", "Other"]
     },
     market: {
       title: "VALUES",
@@ -270,6 +288,12 @@ export const translations = {
           date: "May 05, 2024",
           title: "Q MedPartner hosts C&B Training Workshop",
           desc: "Sharing session on specialized compensation management for the Pharmaceutical industry."
+        },
+        {
+          tag: "Insight",
+          date: "May 01, 2024",
+          title: "5-Star Culture in Private Hospitals",
+          desc: "How to build a personnel team with an excellent service mindset?"
         }
       ]
     },
