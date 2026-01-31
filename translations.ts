@@ -5,6 +5,7 @@ export const translations = {
       goCourse: "Đi đến khóa học",
       allCourses: "Tất cả khóa học",
       ebook: "EBOOK",
+      news: "Tin tức",
       contact: "Contact us",
       support: "Hỗ trợ",
       back: "Quay lại"
@@ -51,6 +52,31 @@ export const translations = {
       point4: "Đồng hành chiến lược",
       point4Desc: "Chúng tôi không chỉ là đơn vị tư vấn, mà là người đồng hành cùng sự phát triển bền vững của bạn."
     },
+    news: {
+      title: "TIN TỨC MỚI NHẤT",
+      subtitle: "Cập nhật xu hướng và thông tin nhân sự y tế mới nhất tại Việt Nam.",
+      readMore: "Xem thêm",
+      items: [
+        {
+          tag: "Xu hướng",
+          date: "15 Tháng 5, 2024",
+          title: "Tương lai ngành Nhân sự Y tế Việt Nam 2025",
+          desc: "Phân tích sự chuyển dịch trong nhu cầu tuyển dụng bác sĩ chuyên khoa và quản lý bệnh viện."
+        },
+        {
+          tag: "Pháp lý",
+          date: "10 Tháng 5, 2024",
+          title: "Cập nhật Luật Lao động mới cho khối Bệnh viện",
+          desc: "Những thay đổi quan trọng về chính sách tiền lương và bảo hiểm cho nhân viên y tế."
+        },
+        {
+          tag: "Sự kiện",
+          date: "05 Tháng 5, 2024",
+          title: "Q MedPartner tổ chức Workshop Đào tạo C&B",
+          desc: "Buổi chia sẻ về kỹ năng quản lý lương thưởng đặc thù cho ngành Dược phẩm."
+        }
+      ]
+    },
     details: {
       recruitment: {
         title: "Dịch Vụ Tuyển Dụng Chuyên Biệt Y Tế",
@@ -89,7 +115,7 @@ export const translations = {
         name: "HẰNG TRỊNH",
         role: "Advisor",
         title: "Chuyên môn Y tế",
-        desc: "Bác sĩ Hằng hội tụ cả tư duy sắc bén của một nhà quản lý tại các tập đoàn đa quốc gia và trái tim ấm áp của một người thầy thuốc; kết hợp y học hiện đại với kỹ năng 'lắng nghe thiền hành' nâng tầm Trải nghiệm khách hàng cho khối Y tế (Abbott, Samsung...)."
+        desc: "Bác sĩ Hằng hội tụ cả tư duy sắc bén của một nhà quản lý tại các tập đoàn đa quốc gia và trái tim ấm áp của một người thầy thuốc; kết hợp y học hiện đại with kỹ năng 'lắng nghe thiền hành' nâng tầm Trải nghiệm khách hàng cho khối Y tế (Abbott, Samsung...)."
       },
       thu: {
         name: "THƯ NGÔ",
@@ -109,6 +135,7 @@ export const translations = {
       goCourse: "Go to Courses",
       allCourses: "All Courses",
       ebook: "EBOOK",
+      news: "News",
       contact: "Contact us",
       support: "Support",
       back: "Back"
@@ -154,6 +181,31 @@ export const translations = {
       point3Desc: "From recruitment to payroll and audits - all your HR needs addressed in one unified stop.",
       point4: "Strategic Companion",
       point4Desc: "We are more than consultants; we are partners in your long-term, sustainable growth."
+    },
+    news: {
+      title: "LATEST NEWS",
+      subtitle: "Stay updated with the latest trends and healthcare HR insights in Vietnam.",
+      readMore: "Read more",
+      items: [
+        {
+          tag: "Trends",
+          date: "May 15, 2024",
+          title: "Future of Healthcare HR in Vietnam 2025",
+          desc: "Analysis of the shift in recruitment needs for specialists and hospital management."
+        },
+        {
+          tag: "Legal",
+          date: "May 10, 2024",
+          title: "New Labor Law Updates for Hospital Blocks",
+          desc: "Key changes in wage policies and insurance for medical personnel."
+        },
+        {
+          tag: "Events",
+          date: "May 05, 2024",
+          title: "Q MedPartner hosts C&B Training Workshop",
+          desc: "Sharing session on specialized compensation management for the Pharmaceutical industry."
+        }
+      ]
     },
     details: {
       recruitment: {

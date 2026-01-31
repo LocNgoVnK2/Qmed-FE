@@ -43,6 +43,7 @@ export const Header: React.FC = () => {
             { label: t.nav.goCourse, href: '#' },
             { label: t.nav.allCourses, href: '#solutions' },
             { label: t.nav.ebook, href: '#' },
+            { label: t.nav.news, href: '#news' },
             { label: t.nav.contact, href: '#contact' },
             { label: t.nav.support, href: '#' }
           ].map((item, idx) => (

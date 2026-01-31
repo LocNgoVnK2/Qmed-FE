@@ -6,6 +6,7 @@ import { Hero } from './components/Hero';
 import { MarketInsight } from './components/MarketInsight';
 import { Solutions } from './components/Solutions';
 import { WhyChooseUs } from './components/WhyChooseUs';
+import { News } from './components/News';
 import { Experts } from './components/Experts';
 import { Footer } from './components/Footer';
 import { SolutionDetail } from './components/SolutionDetail';
@@ -58,6 +59,7 @@ const App: React.FC = () => {
               <MarketInsight />
               <Solutions />
               <WhyChooseUs />
+              <News />
               <Experts />
             </>
           )}
