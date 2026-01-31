@@ -95,30 +95,40 @@ export const translations = {
       title: "TIN TỨC MỚI NHẤT",
       subtitle: "Cập nhật xu hướng và thông tin nhân sự y tế mới nhất tại Việt Nam.",
       readMore: "Xem thêm",
+      all: "Tất cả",
+      newsTags: ["Tất cả", "Xu hướng", "Pháp lý", "Sự kiện", "Góc nhìn"],
       items: [
         {
+          id: 'n1',
           tag: "Xu hướng",
           date: "15 Tháng 5, 2024",
           title: "Tương lai ngành Nhân sự Y tế Việt Nam 2025",
-          desc: "Phân tích sự chuyển dịch trong nhu cầu tuyển dụng bác sĩ chuyên khoa và quản lý bệnh viện."
+          desc: "Phân tích sự chuyển dịch trong nhu cầu tuyển dụng bác sĩ chuyên khoa và quản lý bệnh viện.",
+          content: "Ngành y tế Việt Nam đang chứng kiến sự chuyển dịch mạnh mẽ từ công lập sang tư nhân. Dự kiến đến năm 2025, nhu cầu về nhân lực y tế chất lượng cao sẽ tăng 30%. Các bệnh viện tư nhân đang đầu tư mạnh mẽ vào công nghệ và dịch vụ khách hàng, đòi hỏi nhân sự không chỉ giỏi chuyên môn mà còn phải có kỹ năng mềm xuất sắc. Bài viết này phân tích sâu về các yêu cầu mới cho bác sĩ chuyên khoa và đội ngũ quản trị vận hành bệnh viện."
         },
         {
+          id: 'n2',
           tag: "Pháp lý",
           date: "10 Tháng 5, 2024",
           title: "Cập nhật Luật Lao động mới cho khối Bệnh viện",
-          desc: "Những thay đổi quan trọng về chính sách tiền lương và bảo hiểm cho nhân viên y tế."
+          desc: "Những thay đổi quan trọng về chính sách tiền lương và bảo hiểm cho nhân viên y tế.",
+          content: "Việc áp dụng Luật Lao động mới mang lại nhiều thách thức cho bộ phận C&B tại các bệnh viện. Đặc biệt là quy định về thời giờ làm việc, nghỉ ngơi của nhân viên y tế trực đêm. Q MedPartner tổng hợp các điểm mới quan trọng về cách tính lương tăng ca, phụ cấp đặc thù ngành y và các quy định về bảo hiểm xã hội mới nhất mà chủ đầu tư bệnh viện cần nắm vững để tránh rủi ro pháp lý."
         },
         {
+          id: 'n3',
           tag: "Sự kiện",
           date: "05 Tháng 5, 2024",
           title: "Q MedPartner tổ chức Workshop Đào tạo C&B",
-          desc: "Buổi chia sẻ về kỹ năng quản lý lương thưởng đặc thù cho ngành Dược phẩm."
+          desc: "Buổi chia sẻ về kỹ năng quản lý lương thưởng đặc thù cho ngành Dược phẩm.",
+          content: "Workshop vừa qua đã thu hút hơn 50 chuyên gia HR đến từ các tập đoàn dược phẩm lớn. Ms. Quỳnh Nguyễn đã chia sẻ về các mô hình trả lương theo hiệu suất (Pay-for-performance) và cách xây dựng hệ thống KPI đặc thù cho khối trình dược viên. Các giải pháp tối ưu hóa chi phí nhân sự mà vẫn giữ chân được nhân tài cũng được thảo luận sôi nổi."
         },
         {
+          id: 'n4',
           tag: "Góc nhìn",
           date: "01 Tháng 5, 2024",
           title: "Văn hóa 5 sao trong Bệnh viện tư nhân",
-          desc: "Làm thế nào để xây dựng đội ngũ nhân sự có tư duy dịch vụ xuất sắc?"
+          desc: "Làm thế nào để xây dựng đội ngũ nhân sự có tư duy dịch vụ xuất sắc?",
+          content: "Trải nghiệm bệnh nhân (Patient Experience) đang trở thành lợi thế cạnh tranh cốt lõi. Tuy nhiên, việc thay đổi tư duy 'xin-cho' sang 'phục vụ' trong nhân viên y tế là một hành trình gian nan. Bài viết chia sẻ các bước thực tiễn để xây dựng văn hóa dịch vụ 5 sao, bắt đầu từ khâu tuyển chọn nhân sự có thái độ phù hợp đến các chương trình đào tạo kỹ năng giao tiếp và xử lý tình huống thực tế."
         }
       ]
     },
@@ -160,7 +170,7 @@ export const translations = {
         name: "HẰNG TRỊNH",
         role: "Advisor",
         title: "Chuyên môn Y tế",
-        desc: "Bác sĩ Hằng hội tụ cả tư duy sắc bén của một nhà quản lý tại các tập đoàn đa quốc gia và trái tim ấm áp của một người thầy thuốc; kết hợp y học hiện đại với kỹ năng 'lắng nghe thiền hành' nâng tầm Trải nghiệm khách hàng cho khối Y tế (Abbott, Samsung...)."
+        desc: "Bác sĩ Hằng hội tụ cả tư duy sắc bén của một nhà quản lý tại các tập đoàn đa quốc gia và trái tim ấm áp của một người thầy thuốc; kết hợp y học hiện đại with kỹ năng 'lắng nghe thiền hành' nâng tầm Trải nghiệm khách hàng cho khối Y tế (Abbott, Samsung...)."
       },
       thu: {
         name: "THƯ NGÔ",
@@ -270,30 +280,40 @@ export const translations = {
       title: "LATEST NEWS",
       subtitle: "Stay updated with the latest trends and healthcare HR insights in Vietnam.",
       readMore: "Read more",
+      all: "All",
+      newsTags: ["All", "Trends", "Legal", "Events", "Insights"],
       items: [
         {
+          id: 'n1',
           tag: "Trends",
           date: "May 15, 2024",
           title: "Future of Healthcare HR in Vietnam 2025",
-          desc: "Analysis of the shift in recruitment needs for specialists and hospital management."
+          desc: "Analysis of the shift in recruitment needs for specialists and hospital management.",
+          content: "The Vietnamese healthcare industry is witnessing a strong shift from public to private. High-quality healthcare workforce demand is expected to increase by 30% by 2025. Private hospitals are investing heavily in technology and customer service, requiring personnel with not only professional excellence but also excellent soft skills. This article analyzes the new requirements for specialists and hospital operation management teams."
         },
         {
+          id: 'n2',
           tag: "Legal",
           date: "May 10, 2024",
           title: "New Labor Law Updates for Hospital Blocks",
-          desc: "Key changes in wage policies and insurance for medical personnel."
+          desc: "Key changes in wage policies and insurance for medical personnel.",
+          content: "The application of the new Labor Law brings many challenges to C&B departments in hospitals. Especially regulations on working and resting hours for night-shift medical staff. Q MedPartner summarizes important new points on overtime pay calculation, healthcare-specific allowances, and the latest social insurance regulations that hospital owners must master to avoid legal risks."
         },
         {
+          id: 'n3',
           tag: "Events",
           date: "May 05, 2024",
           title: "Q MedPartner hosts C&B Training Workshop",
-          desc: "Sharing session on specialized compensation management for the Pharmaceutical industry."
+          desc: "Sharing session on specialized compensation management for the Pharmaceutical industry.",
+          content: "The recent workshop attracted more than 50 HR experts from major pharmaceutical corporations. Ms. Quynh Nguyen shared about pay-for-performance models and how to build specific KPI systems for pharmaceuticals. Solutions for optimizing personnel costs while retaining talent were also discussed."
         },
         {
+          id: 'n4',
           tag: "Insight",
           date: "May 01, 2024",
           title: "5-Star Culture in Private Hospitals",
-          desc: "How to build a personnel team with an excellent service mindset?"
+          desc: "How to build a personnel team with an excellent service mindset?",
+          content: "Patient Experience is becoming a core competitive advantage. However, shifting from a 'beg-and-give' mindset to a 'service' mindset in medical staff is a difficult journey. The article shares practical steps to building a 5-star service culture, starting from recruiting staff with the right attitude to training programs on communication and handling real-world situations."
         }
       ]
     },

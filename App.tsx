@@ -14,9 +14,10 @@ import { Courses } from './components/Courses';
 import { Ebooks } from './components/Ebooks';
 import { ContactPage } from './components/ContactPage';
 import { SupportPage } from './components/SupportPage';
+import { NewsDetail } from './components/NewsDetail';
 
 type Language = 'vi' | 'en';
-type View = 'home' | 'courses' | 'ebooks' | 'news' | 'contact' | 'support' | 'solution-detail';
+type View = 'home' | 'courses' | 'ebooks' | 'news' | 'news-detail' | 'contact' | 'support' | 'solution-detail';
 
 interface LanguageContextType {
   lang: Language;
@@ -24,6 +25,8 @@ interface LanguageContextType {
   t: any;
   activeSolution: string | null;
   setActiveSolution: (id: string | null) => void;
+  activeNews: string | null;
+  setActiveNews: (id: string | null) => void;
   currentView: View;
   setCurrentView: (v: View) => void;
 }
@@ -40,6 +43,7 @@ const App: React.FC = () => {
   const [lang, setLang] = useState<Language>('vi');
   const [currentView, setCurrentView] = useState<View>('home');
   const [activeSolution, setActiveSolution] = useState<string | null>(null);
+  const [activeNews, setActiveNews] = useState<string | null>(null);
   const [showBackToTop, setShowBackToTop] = useState(false);
 
   const t = translations[lang];
@@ -55,11 +59,15 @@ const App: React.FC = () => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [currentView, activeSolution]);
+  }, [currentView, activeSolution, activeNews]);
 
   const renderView = () => {
     if (activeSolution) {
       return <SolutionDetail id={activeSolution} />;
+    }
+    
+    if (activeNews) {
+      return <NewsDetail id={activeNews} />;
     }
 
     switch (currentView) {
@@ -68,7 +76,7 @@ const App: React.FC = () => {
       case 'ebooks':
         return <div className="pt-20 animate-fade-up"><Ebooks /></div>;
       case 'news':
-        return <div className="pt-20 animate-fade-up"><News /></div>;
+        return <div className="pt-20 animate-fade-up"><News isPage={true} /></div>;
       case 'contact':
         return <div className="pt-20 animate-fade-up"><ContactPage /></div>;
       case 'support':
@@ -80,11 +88,9 @@ const App: React.FC = () => {
             <Hero />
             <MarketInsight />
             <Solutions />
-            {/* Show only top 3 on Home */}
             <Courses limit={3} />
             <WhyChooseUs />
-            <News />
-            {/* Show only top 3 on Home */}
+            <News limit={3} />
             <Ebooks limit={3} />
             <Experts />
           </>
@@ -94,7 +100,7 @@ const App: React.FC = () => {
 
   return (
     <LanguageContext.Provider value={{ 
-      lang, setLang, t, activeSolution, setActiveSolution, currentView, setCurrentView 
+      lang, setLang, t, activeSolution, setActiveSolution, activeNews, setActiveNews, currentView, setCurrentView 
     }}>
       <div className="min-h-screen relative font-['Montserrat'] bg-white">
         <Header />
