@@ -10,6 +10,14 @@ export const Hero: React.FC = () => {
   const firstWord = titleParts[0];
   const restOfTitle = titleParts.slice(1).join(' ');
 
+  const handleScrollToSolutions = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById('solutions');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-navy">
       {/* Background Visual Layer */}
@@ -41,13 +49,14 @@ export const Hero: React.FC = () => {
                 {restOfTitle}
               </span>
             </h1>
-            <p className="text-white/70 max-w-xl text-xl font-light leading-relaxed mb-10 border-l-2 border-emerald/30 pl-6">
+            <p className="text-white/80 max-w-xl text-xl font-light leading-relaxed mb-10 border-l-2 border-emerald/30 pl-6">
               Empowering Vietnam's booming healthcare sector through strategic talent acquisition and operational excellence.
             </p>
             
             <div className="flex flex-wrap gap-4">
               <a 
                 href="#solutions" 
+                onClick={handleScrollToSolutions}
                 className="px-10 py-5 bg-emerald text-navy font-black text-xs uppercase tracking-widest rounded-2xl hover:bg-white transition-all shadow-2xl shadow-emerald/20 hover:-translate-y-1 inline-block"
               >
                 Explore Solutions
@@ -67,7 +76,7 @@ export const Hero: React.FC = () => {
                 </div>
                 <h3 className="text-white text-xl font-bold tracking-tight uppercase">{t.hero.vision}</h3>
               </div>
-              <p className="text-white/80 leading-relaxed font-light italic text-base">
+              <p className="text-white/90 leading-relaxed font-light italic text-base">
                 "{t.hero.visionDesc}"
               </p>
             </div>
@@ -81,7 +90,7 @@ export const Hero: React.FC = () => {
                 </div>
                 <h3 className="text-white text-xl font-bold tracking-tight uppercase">{t.hero.mission}</h3>
               </div>
-              <p className="text-white/80 leading-relaxed font-light text-base">
+              <p className="text-white/90 leading-relaxed font-light text-base">
                 {t.hero.missionDesc}
               </p>
             </div>

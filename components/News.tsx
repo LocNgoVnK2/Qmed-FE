@@ -5,14 +5,16 @@ import { useTranslation } from '../App';
 export const News: React.FC = () => {
   const { t } = useTranslation();
 
-  // Use more reliable placeholder images
+  // Use reliable healthcare-themed images from Unsplash
   const images = [
-    "https://images.unsplash.com/photo-1504439468489-c8920d796a29?auto=format&fit=crop&q=80&w=1200",
-    "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=800",
-    "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=800"
+    "https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&q=80&w=800",
+    "https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?auto=format&fit=crop&q=80&w=800"
   ];
 
   const newsItems = t.news.items;
+
+  if (!newsItems || newsItems.length === 0) return null;
 
   return (
     <section id="news" className="py-32 bg-slate-50 relative overflow-hidden">
@@ -46,9 +48,9 @@ export const News: React.FC = () => {
               <img 
                 src={images[0]} 
                 alt={newsItems[0].title} 
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-60" 
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
               />
-              {/* Ensure high contrast with a strong gradient overlay */}
+              {/* Ensure high contrast with a strong navy gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent"></div>
             </div>
             
@@ -64,7 +66,7 @@ export const News: React.FC = () => {
               <h3 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tighter leading-[1.1] text-white">
                 {newsItems[0].title}
               </h3>
-              <p className="text-white/80 text-lg font-light mb-8 max-w-xl transition-all duration-500">
+              <p className="text-white/90 text-lg font-light mb-8 max-w-xl">
                 {newsItems[0].desc}
               </p>
               <button className="flex items-center gap-3 text-emerald font-bold text-xs uppercase tracking-[0.2em] group-hover:text-white transition-colors">
@@ -98,10 +100,10 @@ export const News: React.FC = () => {
                     <span className="text-slate-300">•</span>
                     <time className="text-slate-400 text-[9px] font-bold uppercase tracking-widest">{item.date}</time>
                   </div>
-                  <h3 className="text-navy text-xl font-extrabold mb-4 tracking-tight group-hover:text-emerald transition-colors leading-snug">
+                  <h3 className="text-navy text-xl font-extrabold mb-2 tracking-tight group-hover:text-emerald transition-colors leading-snug">
                     {item.title}
                   </h3>
-                  <p className="text-slate-500 text-sm font-light mb-4 line-clamp-2">
+                  <p className="text-slate-600 text-sm font-light mb-4 line-clamp-2">
                     {item.desc}
                   </p>
                   <button className="text-navy font-black text-[10px] uppercase tracking-widest flex items-center gap-2 group-hover:text-emerald transition-colors">
